@@ -1,0 +1,21 @@
+ 
+# Qt generated files
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+*.qmake.cache
+
+# Object files
+*.o
+*.obj
+
+# Build directory
+build*/
+
+# Qt temporary files
+*.qbs
+*.autosave
+
+# Others
+*~
+*.swp
