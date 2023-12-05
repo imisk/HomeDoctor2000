@@ -1,4 +1,6 @@
 #include "mainwindow.h"
+#include "QVBoxLayout"
+#include "ollamaManager.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -6,6 +8,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ollamaMngr = new ollamaManager();
+
+    auto layoutMain = new QVBoxLayout;
+
+    layoutMain->addWidget(ollamaMngr);
+
+    setLayout(layoutMain);
 }
 
 MainWindow::~MainWindow()
@@ -13,3 +22,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::on_btnTest_clicked()
+{
+    ollamaMngr->test();
+}
